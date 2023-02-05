@@ -1,7 +1,7 @@
 import { Bot } from "https://deno.land/x/grammy@v1.14.1/mod.ts"
 import { load } from "https://deno.land/std/dotenv/mod.ts";
 
-// const env = await load();
+await load({ export: true });
 const token = Deno.env.get('BOT_TOKEN');
 if(!token) throw Error("BotError: Token is not set");
 const bot = new Bot(token)
